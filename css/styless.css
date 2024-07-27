@@ -45,3 +45,24 @@ h3{
         font-size: 2.4rem;
     }
 }
+/*links*/
+.link-arrow{
+    color:var(--color-accent);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.link-arrow::after{
+    content: '-->';
+    margin-left: 5px; /*we use px because we want distance to be same
+    no matter how big/small font size is*/
+    transition: margin 0.15s;
+}
+.link-arrow:hover::after{ /*hover effect*/
+    margin-left: 10px;
+}
+@media screen and (min-width:1024px){ /*targeting large screens*/
+    .link-arrow{
+        font-size: 1.5rem;
+    }
+}
