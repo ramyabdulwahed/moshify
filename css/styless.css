@@ -1,5 +1,5 @@
 html{
-    /*if we set font-size to 62.5%, that is 0f 16px = 10px*/
+    /*if we set font-size to 62.5%, that is 0f 16px = 10px. thus 1rem =10px*/
     font: size 62.5%;;
 }
 :root{
