@@ -67,3 +67,31 @@ h3{
         font-size: 1.5rem;
     }
 }
+
+/*BADGES*/
+.badge{
+    border-radius: 20px;
+    padding: 0.5rem 2rem;
+    font-weight: 600;
+    white-space: nowrap; /*prevent text from wrapping meaning it will stay on one line*/
+    font-size:2rem;
+}
+.badge--primary{
+    background: var(--color-primary);
+    color: white;
+}
+.badge--secondary{
+    background: var(--color-secondary);
+    color: white;
+}
+.badge--small{
+    font-size:1.6rem;
+}
+@media screen and (min-width:1024px){ /* for large screens*/
+    .badge{
+        font-size:1.5rem;
+    }
+    .badge--small{
+        font-size:1.2rem;
+    }
+}
