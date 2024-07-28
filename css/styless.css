@@ -95,3 +95,26 @@ h3{
         font-size:1.2rem;
     }
 }
+/*LISTS*/
+.lists{
+    list-style:none; /*remove bullet points*/
+    color: var(--color-headings);
+
+}
+.lists--inline .list--item{ 
+    display: inline-block; /*display items in a row*/
+    margin-right: 2rem; /*space between items*/
+}
+.list--tick{
+    list-style-image: url("../tick.svg"); /*use image as bullet point*/
+    padding-left: 3rem; /*space between bullet point and text*/
+}
+.list--tick .list--item{
+    padding-left: 0.5rem; /*space between bullet point and text*/
+    margin-bottom: 1rem; /*space between items*/
+}
+@media screen and (min-width:1024px){ /* for large screens*/
+    .list--tick .list--item{
+        padding-left: 0;
+    }
+}
