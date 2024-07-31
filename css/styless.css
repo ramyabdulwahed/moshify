@@ -8,7 +8,12 @@ html{
     --color-accent: #ff3400;
     --color-headings: #1b0760;
     --color-body: #918ca4;
+    --color-border: #ccc;
 
+}
+
+*, *::after, * {
+    box-sizing: border-box; /*include padding and border in width and height*/
 }
 body{
     font-family: Inter, Arial, Helvetica, sans-serif;
@@ -138,3 +143,90 @@ h3{
     align-items: center; /*center items vertically*/
 }
 /*buttons*/
+.button{
+    font-size:1.8rem;
+    font-weight:600;
+    padding: 2rem 3rem;
+    transform: uppercase;
+    border:0; /*to remove ugly black order by default*/
+    border-radius:40px;
+    cursor:pointer; /*cursor changes to pointer when hovering over button*/
+    white-space: nowrap; /*prevent text from wrapping*/
+    text-align:center;
+    margin: 1rem 0; /*vertical margin 1rem, horizontal margin 0*/
+}
+.button--primary{
+    background: var(--color-primary);
+    color: white;
+}
+.button--primary:hover{
+    background: #3a8ffd;
+}
+.button--secondary{
+    background: var(--color-secondary);
+    color: white;
+}
+.button--secondary:hover{
+    background: #00c8eb;
+}
+
+.btn--accent{
+    background: var(--color-accent);
+    color: white;
+}
+.btn--accent:hover{
+    background: #ec3000;
+}
+.button--block{
+    width: 100%;
+    display:inline-block; /*display items in a row*/
+}
+
+.button--outline{
+    background: white;
+    color: var(--color-headings);
+    border: 2px solid var(--color-headings);
+}
+.button--outline:hover{
+    background: var(--color-headings);
+    color: white;
+}
+
+@media screen and (min-width:1024px){ /* for large screens*/
+    .button{
+        font-size: 1.5rem;
+    }
+
+}
+/*inputs*/
+.input{
+    border-radius: 30px;
+    border:1px solid var(--color-body);
+    color: var(--color-headings);
+    font-size: 2rem;
+    outline:0; /*remove ugly blue outline when input is clicked*/
+    padding: 1.5rem 3rem;
+}
+::placeholder{
+    color: #cdcbd7;
+}
+@media screen and (min-width:1024px){ /* for large screens*/
+    .input{
+        font-size: 1.5rem;
+    }
+}
+
+/*input groups */
+.input-group{
+    display:flex;
+    border: 1px solid var(--color-border);
+    border-radius: 30px;
+}
+.input-group .input{
+    border:0;
+    flex-grow: 1; /*take up all available space*/
+    padding: 1.5rem 1rem;
+}
+.input-group .button{ /*button inside input group*/
+        margin:4px;
+}
