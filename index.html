@@ -28,11 +28,6 @@
     <span class="badge badge--primary badge--small">10% off</span>
     <!--ul.lists>li{item $}*3-->
 
-    <ul class="lists list--tick">
-      <li class="list--item">item 1</li>
-      <li class="list--item">item 2</li>
-      <li class="list--item">item 3</li>
-    </ul>
     <img src="tick.svg" alt="Tick Icon" />
 
     <span class="icon-container">
@@ -46,15 +41,43 @@
       <button class="button button--accent">Search</button>
     </div>
 
-    <div style="width: 30%; padding: 4rem">
-      <div class="card card--primary">
-        <header class="card__header">Card Title</header>
-        <div class="card__body">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium
-          sapiente et omnis repellat, incidunt corporis! Omnis enim alias atque!
-          Ducimus est ipsum adipisci tempora debitis eveniet voluptates laborum,
-          illum corrupti!
+    <div style="width: 50%; padding: 4rem">
+      <div class="plan plan--popular">
+        <div class="card card--primary">
+          <header class="card__header">
+            <h3 class="plan__name">Entry</h3>
+            <span class="plan__price">$14</span>
+            <span class="plan__billing-cycle">/month</span>
+            <span class="badge badge--secondary bage--small">10%off</span>
+            <span class="plan--description">easy start on the cloud</span>
+          </header>
+          <div class="card__body">
+            <ul class="lists list--tick">
+              <li class="list--item">Unlimited Websites</li>
+              <li class="list--item">Unlimited Bandwidth</li>
+              <li class="list--item">100 GB SSB Sotrage</li>
+              <li class="list--item">3 DB RAM</li>
+            </ul>
+            <button class="button button--outline button--block">
+              Buy Now
+            </button>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <div class="media">
+      <div class="media__image">
+        <svg class="icon icon--primary">
+          <use xlink:href="sprite.svg#snap"></use>
+        </svg>
+      </div>
+      <div class="media__body">
+        <h3 class="media__title">Easy start & Managed Updates</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam,
+          debitis!
+        </p>
       </div>
     </div>
   </body>
