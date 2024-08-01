@@ -230,3 +230,24 @@ h3{
 .input-group .button{ /*button inside input group*/
         margin:4px;
 }
+
+/*divs are block level elements thus its elements they take the entire line space. ex. each element on new line*/
+/*cards*/
+.card{
+    border-radius: 7px;
+    box-shadow: 0 0 20px 10px #f3f3f3;
+    overflow: hidden;
+}
+.card__header, 
+.card__body{
+    padding: 2rem 3rem;
+}
+.card--primary .card__header{ /* this means: if you can have an element of class card--primary its header*/
+    background: var(--color-primary);
+    color: white;
+}
+/*NEVER PUT COMMAS BELOW AND ABOVE THE MEANING IS NOT SAME*/
+.card--secomdary .card__header{ /* this means: if you can have an element of class card--primary its header*/
+    background: var(--color-secondary);
+    color: white;
+}
