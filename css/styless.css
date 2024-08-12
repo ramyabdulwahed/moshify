@@ -4,7 +4,7 @@
 }
 html{
     /*if we set font-size to 62.5%, that is 0f 16px = 10px. thus 1rem =10px*/
-    font: size 62.5%;;
+    font-size: 62.5%;;
 }
 :root{
     --color-primary: #2385ff;
@@ -22,7 +22,7 @@ html{
 body{
     font-family: Inter, Arial, Helvetica, sans-serif;
     color: var(--color-body);
-    font-size:2.4rem; /*2.4rem = 24px*/
+    font-size:2rem; /*2.4rem = 24px*/
     line-height: 1.5;
 }
 h1,h2,h3{
@@ -31,17 +31,20 @@ h1,h2,h3{
     line-height: 1.1;
 }
 h1{
-    font-size: 7rem; /*using rem because it is responsive unlike pixels*/
+    font-size: 6rem; /*using rem because it is responsive unlike pixels*/
 }
 h2{
     font-size: 4rem;
     margin-bottom: 1rem;
 }
 h3{
-    font-size: 3rem;
+    font-size: 2.8rem;
     margin-bottom: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     
+}
+p{
+    margin-top: 0;
 }
 @media screen and (min-width:1024px){
     body{
@@ -58,6 +61,9 @@ h3{
     }
 }
 /*links*/
+a{
+    text-decoration: none; 
+}
 .link-arrow{
     color:var(--color-accent);
     text-transform: uppercase;
@@ -112,7 +118,7 @@ h3{
 .lists{
     list-style:none; /*remove bullet points*/
     color: var(--color-headings);
-    text-decoration: none;
+    padding-left: 0;
 
 }
 .lists--inline .list--item{ 
@@ -122,6 +128,7 @@ h3{
 .list--tick{
     list-style-image: url("../tick.svg"); /*use image as bullet point*/
     padding-left: 3rem; /*space between bullet point and text*/
+    color: var(--color-headings);
 }
 .list--tick .list--item{
     padding-left: 0.5rem; /*space between bullet point and text*/
@@ -165,8 +172,8 @@ h3{
 .button{
     font-size:1.8rem;
     font-weight:600;
-    padding: 2rem 3rem;
-    transform: uppercase;
+    padding: 2rem 4vw;
+    text-transform: uppercase;
     border:0; /*to remove ugly black order by default*/
     border-radius:40px;
     cursor:pointer; /*cursor changes to pointer when hovering over button*/
@@ -235,7 +242,7 @@ h3{
     color: var(--color-headings);
     font-size: 2rem;
     outline:0; /*remove ugly blue outline when input is clicked*/
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 3.5rem;
 }
 ::placeholder{
     color: #cdcbd7;
@@ -256,6 +263,7 @@ h3{
     border:0;
     flex-grow: 1; /*take up all available space*/
     padding: 1.5rem 2rem; /*vertical padding 1.5rem, horizontal padding 2rem*/
+    width:0;
 }
 .input-group .button{ /*button inside input group*/
         margin:4px;
@@ -299,10 +307,10 @@ h3{
    font-size:2.4rem;
 }
 .plan__price{
-    font-size: 6rem;
+    font-size: 5rem;
 }
 .plan__billing-cycle{
-    font-size:2.4rem;
+    font-size:2rem;
     font-weight: 300;
     opacity: 0.8;
     margin-right: 1rem;
@@ -356,7 +364,8 @@ h3{
     margin-bottom: 4rem;
 }
 .media__title{
-    margin:0;
+    margin-top:0;
+    justify-items: end;
 }
 .media__body{
     margin:0 2rem;
@@ -378,14 +387,14 @@ h3{
     content: close-quote;
 }
 .quote__author{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 500;
     font-style: normal;
     margin-bottom: 0;
 }
 .quote__org{
     color: var(--color-headings);
-    font-size: 2rem;
+    font-size: 1.5rem;
     opacity: .4;
     font-style: normal;
 }
@@ -409,7 +418,7 @@ h3{
 /*GRIDS*/
 
 .grid{
-    display:grid;
+    display:grid; 
 }
 @media screen and (min-width:768px){
     .grid--cols-1x2 {
@@ -427,6 +436,7 @@ h3{
 }
 .testimonial__image{
     position: relative;
+    margin: 0 3rem;
 }
 .testimonial__image > img{ /*targeting the image inside the div*/
      width: 100%;
@@ -454,6 +464,7 @@ h3{
 }
 .callout--primary{
     background-color: var(--color-primary);
+    color: #fff
 }
 .callout__heading{
     margin-top:0;
@@ -468,7 +479,7 @@ h3{
 .callout__content{
     text-align: center;
 }
-.button-stretched{
+.button--stretched{
     padding-left: 6rem;
     padding-right: 6rem;
 }
@@ -519,9 +530,8 @@ h3{
 
 /*blocks*/
 .block{
-    --padding-vertical:6rem;
+    --padding-vertical:5rem;
     padding: var(--padding-vertical) 2rem; /* padding 6rem, horizontal padding 2rem*/
-     border: 2px solid red;
 }
 .block__heading{
     margin-top: 0;
@@ -554,7 +564,7 @@ h3{
 
 /*naviagtion bars*/
 .nav{
-    padding: 0 1rem;
+    padding: 1rem;
     align-items: center; /*center items vertically*/
     background-color: #000;
     display: flex;
@@ -576,7 +586,11 @@ h3{
 .nav__item > a { /*targeting the link inside the item*/
     color: #d2d0db;
     transition: color 0.3s;
+    text-decoration: none;
 }
+.nav__item:last-of-type {
+    border-bottom: none;
+  }
 
 .nav__item > a:hover { /*targeting the link inside the item*/
     color: #fff;
@@ -623,28 +637,34 @@ h3{
     width: 100%; /*this means take up all available space*/
 }
 
-@media screen and (min-width: 768px){
-    
-    .hero{
-        padding-top: 0;
+@media screen and (min-width: 768px) {
+    .hero__content {
+      text-align: left;
+      align-self: center;
     }
-    .hero__content{
-        text-align: left;
-        align-self: center; /*center items vertically*/
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .hero {
+      padding-top: 0;
     }
-}
-.block-domain ,.input-group{
+  }
+.block-domain .input-group{
     box-shadow: 0 0 30px 20px #e6ebee;
     border:0;
     margin: 4rem auto;
+    max-width: 670px;
 }
 .block-domain__prices{
+    color: var( --color-headings);
     display : grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2,6rem);
     font-size: 2rem;
     font-weight: 600;
     justify-items: center; /*center items horizontally*/
+    max-width: 700px;
+    margin: 0 auto;
  
 }
 
@@ -695,11 +715,16 @@ h3{
         max-width: 700px;
         justify-self: end; /*align image to the right*/
     }
+    .block-showcase__image>img {
+        width: auto;
+        max-width: 700px;
+      }
 }
 
 /*footer*/
 .footer{
     background-color: #232323;
+    padding: 10rem;
 }
 .footer a{
     color: #777;
@@ -718,6 +743,8 @@ h3{
 .footer__heading{
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.5;
 }
 .footer__brand{
     margin-top:5rem;
@@ -757,7 +784,13 @@ h3{
     .footer_heading{
         font-size: 1.6rem;
     }
+    .footer {
+        font-size: 1.5rem;
+      }
 }
 .collapsible__content .list--item{
     color: grey;
+}
+.host_heading{
+    margin-top: 0;
 }
