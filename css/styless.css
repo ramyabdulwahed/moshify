@@ -373,6 +373,11 @@ a{
 .media__image{
     margin:1rem;
 }
+
+
+.media__body p{
+    color: var(--color-body);
+}
 /*quotes*/
 .quote{
     font-size: 3rem;
@@ -547,11 +552,11 @@ a{
 }
 .block--skewed-right{
     padding-bottom: calc(var(--padding-vertical)) + 4rem; /*padding bottom is padding top + 4rem*/
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
 }
 .block--skewed-left{
     padding-bottom: calc(var(--padding-vertical)) + 4rem; /*padding bottom is padding top + 4rem*/
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
 }
 .block__header{
     text-align: center;
@@ -598,7 +603,7 @@ a{
 .nav.collapsible--expanded .nav__toggler{ /*targeting the toggler inside the expanded nav*/
     opacity: 1; /*looks darker*/
     box-shadow:  0 0 0 3px #666;
-    border-radius:5px;
+    border-radius:5px
 }
 .nav__toggler{
     opacity:0.5;
